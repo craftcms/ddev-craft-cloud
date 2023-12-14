@@ -1,0 +1,20 @@
+#ddev-generated
+services:
+  bref:
+    build:
+      context: bref
+    container_name: ddev-${DDEV_PROJECT}-bref
+    expose:
+      - "8000"
+    environment:
+      HANDLER: web/index.php
+      DOCUMENT_ROOT: web
+      VIRTUAL_HOST: $DDEV_HOSTNAME
+      HTTP_EXPOSE: "8000:8000"
+      HTTPS_EXPOSE: "8081:8000"
+      PHP_IDE_CONFIG: serverName=bref
+    external_links:
+      - ddev-router:${DDEV_PROJECT}.ddev.site
+    volumes:
+    - ".:/mnt/ddev_config"
+    - ${DDEV_APPROOT}:/var/task:ro
