@@ -1,13 +1,13 @@
-[![tests](https://github.com/ddev/ddev-bref/actions/workflows/tests.yml/badge.svg)](https://github.com/ddev/ddev-bref/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
+[![tests](https://github.com/ddev/ddev-craft-cloud/actions/workflows/tests.yml/badge.svg)](https://github.com/ddev/ddev-craft-cloud/actions/workflows/tests.yml) ![project is maintained](https://img.shields.io/maintenance/yes/2024.svg)
 
-# ddev-bref <!-- omit in toc -->
+# ddev-craft-cloud <!-- omit in toc -->
 
-* [What is ddev-bref?](#what-is-ddev-bref)
+* [What is ddev-craft-cloud?](#what-is-ddev-craft-cloud)
 * [Components of the repository](#components-of-the-repository)
 * [Getting started](#getting-started)
 * [How to debug in Github Actions](#how-to-debug-in-github-actions)
 
-## What is ddev-bref?
+## What is ddev-craft-cloud?
 
 This repository is a template for providing [DDEV](https://ddev.readthedocs.io) add-ons and services.
 
