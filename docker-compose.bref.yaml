@@ -6,9 +6,11 @@ services:
     container_name: ddev-${DDEV_PROJECT}-bref
     expose:
       - "8000"
+    env_file:
+      - .env.cloud
     environment:
-      HANDLER: web/index.php
-      DOCUMENT_ROOT: web
+      HANDLER: ${DDEV_DOCROOT}/index.php
+      DOCUMENT_ROOT: ${DDEV_DOCROOT}
       VIRTUAL_HOST: $DDEV_HOSTNAME
       HTTP_EXPOSE: "8000:8000"
       HTTPS_EXPOSE: "8081:8000"
@@ -16,5 +18,5 @@ services:
     external_links:
       - ddev-router:${DDEV_PROJECT}.ddev.site
     volumes:
-    - ".:/mnt/ddev_config"
-    - ${DDEV_APPROOT}:/var/task:ro
+      - ".:/mnt/ddev_config"
+      - ${DDEV_APPROOT}:/var/task:ro
