@@ -71,7 +71,7 @@ global_files:
 
 # List of add-on names that this add-on depends on
 dependencies:
-- redis
+- ddev/ddev-redis
 - oblakstudio/ddev-minio
 
 # DDEV environment variables can be interpolated into these actions
