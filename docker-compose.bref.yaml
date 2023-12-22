@@ -24,4 +24,5 @@ services:
     volumes:
       - .:/mnt/ddev_config
       - ${DDEV_APPROOT}:/var/task:ro
-      - ${DDEV_APPROOT}/config/cloud.php:/var/task/config/cloud.php
+      - ./craft-cloud/php:/var/task/php:ro
+      - ./craft-cloud/config/cloud.php:/var/task/config/cloud.php:ro
