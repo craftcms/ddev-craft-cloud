@@ -24,5 +24,5 @@ services:
       com.ddev.approot: $DDEV_APPROOT
     volumes:
       - .:/mnt/ddev_config
-      - ./craft-cloud/php:/var/task/php:ro
+      - ./craft-cloud/php:/var/task/php
       - ${DDEV_APPROOT}:/var/task:ro
