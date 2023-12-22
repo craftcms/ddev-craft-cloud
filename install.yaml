@@ -60,6 +60,7 @@ pre_install_actions:
 project_files:
 - docker-compose.bref.yaml
 - bref
+- .env.cloud
 # - extra_files/
 # - somefile.sh
 
