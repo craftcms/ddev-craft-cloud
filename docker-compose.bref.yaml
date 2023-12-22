@@ -17,6 +17,9 @@ services:
       PHP_IDE_CONFIG: serverName=bref
     external_links:
       - ddev-router:${DDEV_PROJECT}.ddev.site
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: $DDEV_APPROOT
     volumes:
-      - ".:/mnt/ddev_config"
+      - .:/mnt/ddev_config
       - ${DDEV_APPROOT}:/var/task:ro
