@@ -2,12 +2,13 @@
 services:
   bref:
     build:
-      context: bref
+      context: ./craft-cloud
+      dockerfile: bref.Dockerfile
     container_name: ddev-${DDEV_PROJECT}-bref
     expose:
       - "8000"
     env_file:
-      - .env.cloud
+      - ./craft-cloud/.env.static
     environment:
       HANDLER: ${DDEV_DOCROOT}/index.php
       DOCUMENT_ROOT: ${DDEV_DOCROOT}
@@ -23,3 +24,4 @@ services:
     volumes:
       - .:/mnt/ddev_config
       - ${DDEV_APPROOT}:/var/task:ro
+      - ${DDEV_APPROOT}/config/cloud.php:/var/task/config/cloud.php
