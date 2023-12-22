@@ -16,7 +16,7 @@ services:
       HTTP_EXPOSE: "8000:8000"
       HTTPS_EXPOSE: "8081:8000"
       PHP_IDE_CONFIG: serverName=bref
-      CRAFT_CLOUD_S3_ENDPOINT: http://minio.${DDEV_PROJECT}.orb.local:10101
+      CRAFT_CLOUD_STORAGE_ENDPOINT: http://minio.${DDEV_PROJECT}.orb.local:10101
     external_links:
       - ddev-router:${DDEV_PROJECT}.ddev.site
     labels:
