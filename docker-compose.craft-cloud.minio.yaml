@@ -8,8 +8,8 @@ services:
     hostname: ddev-${DDEV_SITENAME}-craft-cloud-minio
     environment:
       MINIO_VOLUMES: "/data"
-      MINIO_ROOT_USER: minio
-      MINIO_ROOT_PASSWORD: minio
+      MINIO_ROOT_USER: craftcms
+      MINIO_ROOT_PASSWORD: craftcms
       MINIO_SERVER_URL: ${DDEV_PRIMARY_URL}:10101
       MINIO_BROWSER_REDIRECT_URL: ${DDEV_PRIMARY_URL}:9090
       VIRTUAL_HOST: $DDEV_HOSTNAME
