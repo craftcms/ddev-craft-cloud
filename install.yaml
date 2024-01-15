@@ -77,9 +77,9 @@ dependencies:
 # DDEV environment variables can be interpolated into these actions
 post_install_actions:
   - ddev mc alias set local http://localhost:10101 craftcms craftcms
-  - ddev mc mb local/craft-cloud-project-id --ignore-existing
+  - ddev mc mb local/craft-cloud-project-id/my-environment-id/assets --ignore-existing
+  - ddev mc mb local/craft-cloud-project-id/my-environment-id/builds --ignore-existing
   - ddev mc anonymous set public local/craft-cloud-project-id
-
 
 # Shell actions that can be done during removal of the add-on
 removal_actions:
