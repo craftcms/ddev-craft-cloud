@@ -58,7 +58,9 @@ pre_install_actions:
 # if it hasn't been modified by the user.
 # DDEV environment variables can be interpolated into these filenames
 project_files:
-- docker-compose.bref.yaml
+- docker-compose.craft-cloud.bref.yaml
+- docker-compose.craft-cloud.minio.yaml
+- docker-compose.craft-cloud.redis.yaml
 - craft-cloud
 
 # List of files and directories that are copied into the global .ddev directory
@@ -69,8 +71,6 @@ global_files:
 
 # List of add-on names that this add-on depends on
 dependencies:
-- ddev/ddev-redis
-- oblakstudio/ddev-minio
 
 # DDEV environment variables can be interpolated into these actions
 post_install_actions:
