@@ -3,7 +3,7 @@ services:
   craft-cloud-bref:
     build:
       context: ./craft-cloud/bref
-    container_name: ddev-${DDEV_PROJECT}-bref
+    container_name: ddev-${DDEV_PROJECT}-craft-cloud-bref
     expose:
       - "8000"
     env_file:
@@ -16,7 +16,7 @@ services:
       HTTPS_EXPOSE: "8081:8000"
       PHP_IDE_CONFIG: serverName=craft-cloud-bref
       CRAFT_CLOUD_PROJECT_ID: ${DDEV_PROJECT}
-      CRAFT_CLOUD_STORAGE_ENDPOINT: http://minio.ddev-${DDEV_PROJECT}.orb.local:10101
+      CRAFT_CLOUD_STORAGE_ENDPOINT: http://craft-cloud-minio.ddev-${DDEV_PROJECT}.orb.local:10101
       CRAFT_CLOUD_CDN_BASE_URL: https://${DDEV_PROJECT}:10101/${DDEV_PROJECT}
       CRAFT_CLOUD_ACCESS_KEY: minio
       CRAFT_CLOUD_ACCESS_SECRET: minio

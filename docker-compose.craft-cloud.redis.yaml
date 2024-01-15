@@ -1,7 +1,7 @@
 #ddev-generated
 services:
   craft-cloud-redis:
-    container_name: ddev-${DDEV_SITENAME}-redis
+    container_name: ddev-${DDEV_SITENAME}-craft-cloud-redis
     image: redis:7
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
