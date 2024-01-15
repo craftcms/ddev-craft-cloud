@@ -3,8 +3,8 @@
   "aliases": {
     "minio": {
       "url": "http://localhost:10101",
-      "accessKey": "ddevminio",
-      "secretKey": "ddevminio",
+      "accessKey": "minio",
+      "secretKey": "minio",
       "api": "s3v4",
       "path": "auto"
     }

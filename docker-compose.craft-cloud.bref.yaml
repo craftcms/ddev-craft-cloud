@@ -14,8 +14,13 @@ services:
       VIRTUAL_HOST: $DDEV_HOSTNAME
       HTTP_EXPOSE: "8000:8000"
       HTTPS_EXPOSE: "8081:8000"
-      PHP_IDE_CONFIG: serverName=bref
+      PHP_IDE_CONFIG: serverName=craft-cloud-bref
+      CRAFT_CLOUD_PROJECT_ID: ${DDEV_PROJECT}
       CRAFT_CLOUD_STORAGE_ENDPOINT: http://minio.ddev-${DDEV_PROJECT}.orb.local:10101
+      CRAFT_CLOUD_CDN_BASE_URL: https://${DDEV_PROJECT}:10101/${DDEV_PROJECT}
+      CRAFT_CLOUD_ACCESS_KEY: minio
+      CRAFT_CLOUD_ACCESS_SECRET: minio
+      CRAFT_CLOUD_REGION: us-west-1
     external_links:
       - ddev-router:${DDEV_PROJECT}.ddev.site
     labels:
