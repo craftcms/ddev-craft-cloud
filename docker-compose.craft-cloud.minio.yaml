@@ -3,8 +3,7 @@
 services:
   minio:
     container_name: ddev-${DDEV_SITENAME}-minio
-    build:
-      context: .minioImageBuild
+    image: minio/minio:latest
     hostname: ddev-${DDEV_SITENAME}-minio
     environment:
       MINIO_VOLUMES: "/data"
