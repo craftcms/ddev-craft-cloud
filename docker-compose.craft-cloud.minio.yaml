@@ -25,7 +25,6 @@ services:
       - "craft-cloud-minio:/data"
       - ".:/mnt/ddev_config"
       - ddev-global-cache:/mnt/ddev-global-cache
-      - "./craft-cloud/minio/mc-config.json:/root/.mc/config.json"
     expose:
       - "9000"
       - "10101"
