@@ -3,7 +3,8 @@
 services:
   craft-cloud-minio:
     container_name: ddev-${DDEV_SITENAME}-minio
-    image: minio/minio:latest
+    build:
+      context: ./craft-cloud/minio
     hostname: ddev-${DDEV_SITENAME}-minio
     environment:
       MINIO_VOLUMES: "/data"
