@@ -18,8 +18,8 @@ services:
       CRAFT_CLOUD_PROJECT_ID: ${DDEV_PROJECT}
       CRAFT_CLOUD_STORAGE_ENDPOINT: http://craft-cloud-minio.ddev-${DDEV_PROJECT}.orb.local:10101
       CRAFT_CLOUD_CDN_BASE_URL: https://${DDEV_PROJECT}:10101/${DDEV_PROJECT}
-      CRAFT_CLOUD_ACCESS_KEY: minio
-      CRAFT_CLOUD_ACCESS_SECRET: minio
+      CRAFT_CLOUD_ACCESS_KEY: craftcms
+      CRAFT_CLOUD_ACCESS_SECRET: craftcms
       CRAFT_CLOUD_REGION: us-west-1
     external_links:
       - ddev-router:${DDEV_PROJECT}.ddev.site

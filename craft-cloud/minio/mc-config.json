@@ -3,8 +3,8 @@
   "aliases": {
     "minio": {
       "url": "http://localhost:10101",
-      "accessKey": "minio",
-      "secretKey": "minio",
+      "accessKey": "craftcms",
+      "secretKey": "craftcms",
       "api": "s3v4",
       "path": "auto"
     }
