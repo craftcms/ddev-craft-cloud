@@ -1,6 +1,6 @@
 #ddev-generated
 services:
-  bref:
+  craft-cloud-bref:
     build:
       context: ./craft-cloud/bref
     container_name: ddev-${DDEV_PROJECT}-bref
@@ -24,4 +24,4 @@ services:
     volumes:
       - .:/mnt/ddev_config
       - ${DDEV_APPROOT}:/var/task:ro
-      - ./craft-cloud/php:/var/task/php
+      - ./craft-cloud/bref/php:/var/task/php

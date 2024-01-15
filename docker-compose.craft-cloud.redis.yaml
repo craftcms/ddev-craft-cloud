@@ -1,6 +1,6 @@
 #ddev-generated
 services:
-  redis:
+  craft-cloud-redis:
     container_name: ddev-${DDEV_SITENAME}-redis
     image: redis:7
     labels:
@@ -8,7 +8,6 @@ services:
       com.ddev.approot: $DDEV_APPROOT
     volumes:
       - ".:/mnt/ddev_config"
-      - "redis:/data"
-
+      - "craft-cloud-redis:/data"
 volumes:
-  redis:
+  craft-cloud-redis:

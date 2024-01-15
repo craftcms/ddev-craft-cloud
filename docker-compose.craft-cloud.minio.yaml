@@ -1,7 +1,7 @@
 #ddev-generated
 # MinIO addon for DDEV - Base file
 services:
-  minio:
+  craft-cloud-minio:
     container_name: ddev-${DDEV_SITENAME}-minio
     image: minio/minio:latest
     hostname: ddev-${DDEV_SITENAME}-minio
@@ -21,7 +21,7 @@ services:
       --address
       :10101
     volumes:
-      - "minio:/data"
+      - "craft-cloud-minio:/data"
       - ".:/mnt/ddev_config"
       - ddev-global-cache:/mnt/ddev-global-cache
       - "./craft-cloud/minio/mc-config.json:/root/.mc/config.json"
@@ -51,7 +51,7 @@ services:
       retries: 1
 
 volumes:
-  minio:
+  craft-cloud-minio:
     name: ddev-${DDEV_SITENAME}-minio
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}

@@ -62,6 +62,8 @@ project_files:
 - docker-compose.craft-cloud.minio.yaml
 - docker-compose.craft-cloud.redis.yaml
 - craft-cloud
+- commands/craft-cloud-minio
+- commands/craft-cloud-redis
 
 # List of files and directories that are copied into the global .ddev directory
 # DDEV environment variables can be interpolated into these filenames
