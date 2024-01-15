@@ -2,10 +2,10 @@
 # MinIO addon for DDEV - Base file
 services:
   craft-cloud-minio:
-    container_name: ddev-${DDEV_SITENAME}-minio
+    container_name: ddev-${DDEV_SITENAME}-craft-cloud-minio
     build:
       context: ./craft-cloud/minio
-    hostname: ddev-${DDEV_SITENAME}-minio
+    hostname: ddev-${DDEV_SITENAME}-craft-cloud-minio
     environment:
       MINIO_VOLUMES: "/data"
       MINIO_ROOT_USER: ddevminio
@@ -53,6 +53,6 @@ services:
 
 volumes:
   craft-cloud-minio:
-    name: ddev-${DDEV_SITENAME}-minio
+    name: ddev-${DDEV_SITENAME}-craft-cloud-minio
     labels:
       com.ddev.site-name: ${DDEV_SITENAME}
