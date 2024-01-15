@@ -76,9 +76,10 @@ dependencies:
 
 # DDEV environment variables can be interpolated into these actions
 post_install_actions:
-# - chmod +x ~/.ddev/commands/web/somecommand
-# - touch somefile.${GOOS}.${DDEV_WEBSERVER}
-# - perl -pi -e 's/oldstring/newstring/g' docker-compose.bref.yaml
+  - ddev mc alias set local http://localhost:10101 craftcms craftcms
+  - ddev mc mb local/craft-cloud-project-id --ignore-existing
+  - ddev mc anonymous set public local/craft-cloud-project-id
+
 
 # Shell actions that can be done during removal of the add-on
 removal_actions:
