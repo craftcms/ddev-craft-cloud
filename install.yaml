@@ -43,12 +43,12 @@ pre_install_actions:
 #
 #  docroot: {{ dig "web" "locations" "/" "root" "notfound" .platformapp }}
 #  {{ if eq .platformapp.build.flavor "composer" }}
-  hooks:
-    post-start:
-#      - exec: mc mb minio/craft-cloud-project-id/my-environment-id/assets --ignore-existing
-#        service: minio
-#      - exec: mc anonymous set public minio/craft-cloud-project-id
-#        service: minio
+hooks:
+  post-start:
+    - exec: mc mb minio/craft-cloud-project-id/my-environment-id/assets --ignore-existing
+      service: minio
+    - exec: mc anonymous set public minio/craft-cloud-project-id
+      service: minio
 
 # list of files and directories listed that are copied into project .ddev directory
 # Each file should contain #ddev-generated so it can be replaced by a later `ddev get`
