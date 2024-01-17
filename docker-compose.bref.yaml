@@ -1,9 +1,9 @@
 #ddev-generated
 services:
-  craft-cloud-bref:
+  bref:
     build:
       context: ./craft-cloud/bref
-    container_name: ddev-${DDEV_PROJECT}-craft-cloud-bref
+    container_name: ddev-${DDEV_PROJECT}-bref
     expose:
       - "8000"
     env_file:
@@ -14,7 +14,7 @@ services:
       VIRTUAL_HOST: $DDEV_HOSTNAME
       HTTP_EXPOSE: "8000:8000"
       HTTPS_EXPOSE: "8081:8000"
-      PHP_IDE_CONFIG: serverName=craft-cloud-bref
+      PHP_IDE_CONFIG: serverName=bref
       CRAFT_CLOUD_PROJECT_ID: craft-cloud-project-id
       CRAFT_CLOUD_ENIRONMENT_ID: craft-cloud-environment-id
       CRAFT_CLOUD_STORAGE_ENDPOINT: http://craft-cloud-minio.ddev-${DDEV_PROJECT}.orb.local:10101
